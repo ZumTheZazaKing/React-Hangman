@@ -1,7 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap");
+* {
+  font-family: "Quicksand", sans-serif;
+}
+
 body {
   background-color: burlywood;
   margin: 0;
   padding: 0;
+}
+body .App {
+  margin-right: auto;
+  margin-left: auto;
+  width: 60%;
+  text-align: center;
+  margin-top: 50px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 0 2px 4px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  margin-bottom: 50px;
+}
+body #Main {
+  padding: 20px;
+}
+body #Main h1 {
+  margin: 10px;
+  padding: 0;
+  margin-top: 0px;
 }
 body #ingame #letters {
   display: grid;
@@ -15,6 +40,19 @@ body #ingame #letters .letter {
   border: 2px solid white;
   color: white;
   font-size: 24px;
+  text-transform: uppercase;
+}
+body #ingame #hiddenWord {
+  margin: 20px;
+}
+body #ingame #wordHint {
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 800px) {
+  .App {
+    width: 90% !important;
+  }
 }
 
 /*# sourceMappingURL=App.css.map */

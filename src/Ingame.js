@@ -19,12 +19,11 @@ export function Ingame(){
     const alphabet = 'abcdefghijklmnopqrstuvwxyz';
 
     return (<div id="ingame">
-        <h1>Ingame</h1>
-        <p>{hiddenWord}</p>
-        <p>{wordHint}</p>
+        <p id="hiddenWord">{hiddenWord}</p>
+        <p id="wordHint">{wordHint}</p>
 
         <div id="letters">
-            {alphabet && alphabet.split("").map(letter => <Letter letter={letter}>{letter.toUpperCase}</Letter>)}
+            {alphabet && alphabet.split("").map(letter => <Letter letter={letter}>{letter}</Letter>)}
         </div>
     </div>)
 }
