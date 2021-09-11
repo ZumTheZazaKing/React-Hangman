@@ -1,13 +1,27 @@
 import { Context } from './Contexts/Context';
 
-import { useContext } from 'react';
+import { useContext, useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 
 export function Ingame(){
 
-    const { word, setWord } = useContext(Context);
+    const history = useHistory();
 
-    return (<div>
+    const { word, wordHint } = useContext(Context);
+
+    useEffect(() => {
+        if(!word)history.push("/");
+    })
+
+    const [hiddenWord, setHiddenWord] = useState(word.replace(/\w/g, "_ "));
+
+    return (<div id="ingame">
         <h1>Ingame</h1>
-        <p>{word}</p>
+        <p>{hiddenWord}</p>
+        <p>{wordHint}</p>
+
+        <div id="letters">
+            
+        </div>
     </div>)
 }
