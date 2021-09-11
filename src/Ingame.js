@@ -1,4 +1,5 @@
 import { Context } from './Contexts/Context';
+import { Letter } from './Letter';
 
 import { useContext, useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
@@ -15,13 +16,15 @@ export function Ingame(){
 
     const [hiddenWord, setHiddenWord] = useState(word.replace(/\w/g, "_ "));
 
+    const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+
     return (<div id="ingame">
         <h1>Ingame</h1>
         <p>{hiddenWord}</p>
         <p>{wordHint}</p>
 
         <div id="letters">
-            
+            {alphabet && alphabet.split("").map(letter => <Letter letter={letter}>{letter.toUpperCase}</Letter>)}
         </div>
     </div>)
 }
