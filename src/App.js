@@ -11,6 +11,7 @@ function App() {
 
   const [word, setWord] = useState("");
   const [wordHint, setWordHint] = useState("");
+  const [lives, setLives] = useState(5);
 
   return (
     <Router>
@@ -20,8 +21,9 @@ function App() {
 
             <Context.Provider value={{
               word, setWord, 
-              wordHint, setWordHint}
-              }>
+              wordHint, setWordHint,
+              lives, setLives
+            }}>
               <Route exact path="/">
                 <Main/>
               </Route>

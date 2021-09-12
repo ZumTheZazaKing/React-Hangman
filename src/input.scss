@@ -2,6 +2,7 @@
 
 *{
     font-family: 'Quicksand', sans-serif;
+    box-sizing: border-box;
 }
 
 
@@ -45,10 +46,22 @@ body{
                 color: white;
                 font-size: 24px;
                 text-transform: uppercase;
+                cursor: pointer;
+            }
+            p{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 20px;
+                margin: 0;
+                padding: 0;
+                grid-column: span 2;
             }
         }
         #hiddenWord{
             margin: 20px;
+            font-size: 24px;
+            font-weight: 700;
         }
         #wordHint{
             font-weight: 600;

@@ -1,5 +1,5 @@
 export function Letter(props){
-    return (<span className="letter">
+    return (<span onClick={e => props.chooseLetter(e)} className="letter">
         {props.letter}
     </span>)
 }
