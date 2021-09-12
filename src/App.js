@@ -5,6 +5,7 @@ import { Context } from './Contexts/Context';
 
 const Main = lazy(() => import('./Main').then(module => ({default:module.Main})));
 const Ingame = lazy(() => import('./Ingame').then(module => ({default:module.Ingame})));
+const Result = lazy(() => import('./Result').then(module => ({default:module.Result})));
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
   const [word, setWord] = useState("");
   const [wordHint, setWordHint] = useState("");
   const [lives, setLives] = useState(5);
+  const [result, setResult] = useState("");
 
   return (
     <Router>
@@ -22,13 +24,17 @@ function App() {
             <Context.Provider value={{
               word, setWord, 
               wordHint, setWordHint,
-              lives, setLives
+              lives, setLives,
+              result, setResult
             }}>
               <Route exact path="/">
                 <Main/>
               </Route>
               <Route exact path="/ingame">
                 <Ingame/>
+              </Route>
+              <Route exact path="/end">
+                <Result/>
               </Route>
             </Context.Provider>
 

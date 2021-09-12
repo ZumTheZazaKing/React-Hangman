@@ -9,7 +9,7 @@ export function Ingame(){
 
     const history = useHistory();
 
-    const { word, wordHint, lives, setLives } = useContext(Context);
+    let { word, wordHint, lives, setLives, setResult } = useContext(Context);
 
     useEffect(() => {
         if(!word)history.push("/");
@@ -24,14 +24,13 @@ export function Ingame(){
     const alphabet = 'abcdefghijklmnopqrstuvwxyz';
 
     function chooseLetter(e){
+        if(chosenLetters.includes(e.target.innerHTML))return setOpen(true);
+        setChosenLetters([...chosenLetters, e.target.innerHTML]);
+
         if(word.includes(e.target.innerHTML)){
-            if(chosenLetters.includes(e.target.innerHTML)){
-                setOpen(true);
-            } else {
-                console.log(e.target.innerHTML);
-                setChosenLetters([...chosenLetters, e.target.innerHTML]);
-                revealWord(e.target.innerHTML);
-            }
+            revealWord(e.target.innerHTML);
+        } else {
+            takeAwayLife()
         }
     }
 
@@ -42,6 +41,23 @@ export function Ingame(){
         }
         setHiddenWord(tempHiddenWord);
     }
+
+    function takeAwayLife(){
+        setLives(lives - 1)
+    }
+
+    const detectResult = setInterval(() => {
+        if(!hiddenWord.includes("_")){
+            setResult("YOU WIN!!!");
+            history.push("/end");
+            clearInterval(detectResult);
+        }
+        if(lives === 0){
+            setResult("GAME OVER");
+            history.push("/end");
+            clearInterval(detectResult);
+        }
+    },100);
 
     return (<div id="ingame">
         <p id="hiddenWord">{hiddenWord}</p>
