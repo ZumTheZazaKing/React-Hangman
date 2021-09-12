@@ -51,13 +51,20 @@ export function Ingame(){
             setResult("YOU WIN!!!");
             history.push("/end");
             clearInterval(detectResult);
+            resetLocalValues();
         }
         if(lives === 0){
             setResult("GAME OVER");
             history.push("/end");
             clearInterval(detectResult);
+            resetLocalValues();
         }
     },100);
+
+    function resetLocalValues(){
+        setOpen(false);
+        setChosenLetters([]);
+    }
 
     return (<div id="ingame">
         <p id="hiddenWord">{hiddenWord}</p>
