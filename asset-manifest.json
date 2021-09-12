@@ -1,0 +1,34 @@
+{
+  "files": {
+    "static/js/0.d6935d56.chunk.js": "/React-Hangman/static/js/0.d6935d56.chunk.js",
+    "static/js/0.d6935d56.chunk.js.map": "/React-Hangman/static/js/0.d6935d56.chunk.js.map",
+    "static/js/1.2307af54.chunk.js": "/React-Hangman/static/js/1.2307af54.chunk.js",
+    "static/js/1.2307af54.chunk.js.map": "/React-Hangman/static/js/1.2307af54.chunk.js.map",
+    "main.css": "/React-Hangman/static/css/main.3bb92b47.chunk.css",
+    "main.js": "/React-Hangman/static/js/main.87c697e1.chunk.js",
+    "main.js.map": "/React-Hangman/static/js/main.87c697e1.chunk.js.map",
+    "runtime-main.js": "/React-Hangman/static/js/runtime-main.693701b4.js",
+    "runtime-main.js.map": "/React-Hangman/static/js/runtime-main.693701b4.js.map",
+    "static/js/4.3356cbe1.chunk.js": "/React-Hangman/static/js/4.3356cbe1.chunk.js",
+    "static/js/4.3356cbe1.chunk.js.map": "/React-Hangman/static/js/4.3356cbe1.chunk.js.map",
+    "static/js/5.f9c72cdb.chunk.js": "/React-Hangman/static/js/5.f9c72cdb.chunk.js",
+    "static/js/5.f9c72cdb.chunk.js.map": "/React-Hangman/static/js/5.f9c72cdb.chunk.js.map",
+    "static/js/6.f998002b.chunk.js": "/React-Hangman/static/js/6.f998002b.chunk.js",
+    "static/js/6.f998002b.chunk.js.map": "/React-Hangman/static/js/6.f998002b.chunk.js.map",
+    "static/js/7.c16516d9.chunk.js": "/React-Hangman/static/js/7.c16516d9.chunk.js",
+    "static/js/7.c16516d9.chunk.js.map": "/React-Hangman/static/js/7.c16516d9.chunk.js.map",
+    "static/js/8.ce030b7b.chunk.js": "/React-Hangman/static/js/8.ce030b7b.chunk.js",
+    "static/js/8.ce030b7b.chunk.js.map": "/React-Hangman/static/js/8.ce030b7b.chunk.js.map",
+    "index.html": "/React-Hangman/index.html",
+    "static/css/main.3bb92b47.chunk.css.map": "/React-Hangman/static/css/main.3bb92b47.chunk.css.map",
+    "static/js/0.d6935d56.chunk.js.LICENSE.txt": "/React-Hangman/static/js/0.d6935d56.chunk.js.LICENSE.txt",
+    "static/js/4.3356cbe1.chunk.js.LICENSE.txt": "/React-Hangman/static/js/4.3356cbe1.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/React-Hangman/static/media/sky.4aff2d42.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.693701b4.js",
+    "static/js/4.3356cbe1.chunk.js",
+    "static/css/main.3bb92b47.chunk.css",
+    "static/js/main.87c697e1.chunk.js"
+  ]
+}
