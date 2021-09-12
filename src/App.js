@@ -39,6 +39,7 @@ function App() {
             </Context.Provider>
 
           </Switch>
+          
         </Suspense>
       </div>
     </Router>

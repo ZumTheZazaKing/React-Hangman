@@ -18,7 +18,6 @@ export function Main(){
         .then(res => res.json())
         .then(data => {
             setWord(data[0]);
-            console.log(data[0]);
             fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${data[0]}`)
             .then(res => res.json())
             .then(dataset => {
@@ -33,6 +32,7 @@ export function Main(){
 
     return (<div id="Main">
         <h1>Hangman</h1>
+        <p>(Without the hangman)</p>
         <Button variant="contained" color="primary" disabled={buttonState} onClick={(() => generateWord())}>Play</Button>
     </div>)
 }
